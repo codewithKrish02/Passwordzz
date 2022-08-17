@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Passwordzz</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Animation-Cards.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'assets/css/Pretty-Registration-Form.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body style="/*overflow: hidden;*/">
+    <nav class="navbar navbar-light navbar-expand-md" style="padding-top: 50px;/*background: linear-gradient(to right, #d9e6e9 0%,#d9e6e9 67%,white 20%);*/background: #d9e6e9;">
+        <div class="container-fluid"><a class="navbar-brand" data-bss-hover-animate="pulse" href="#" style="/*margin-top: 30px;*/margin-left: 40px;font-size: 40px;color: #0e353d;font-weight: bold;">Passwordzz</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="margin-right: 30px;">
+                <ul class="navbar-nav ml-auto" style="/*padding: 10px;*/">
+                    <li class="nav-item text-center"><label style="font-size: 18px;color: rgba(75,75,75,0.9);padding-right: 5px;padding-left: 15px;">New to Passwordzz?</label><a class="btn btn-primary" type="button" style="background-color: rgba(255,255,255,0);color: #0E353D;font-weight: bold;/*padding-left: 20px;*/font-size: 18px;border-style: none;" href="{% url 'registration' %}">Create an account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row" style="height: 80%;">
+        <div class="col-xl-7" style="padding-top: 230px;padding-left: 80px;padding-right: 40px;">
+            <div class="container">
+                <h1 class="text-left" style="/*margin-top: 100px;*//*padding-top: 190px;*/text-align: center;font-size: 36px;color: #0e353d;"><strong>WELCOME TO Passwordzz ON THE WEB</strong><br></h1>
+                <h4 style="font-size: 20px;padding-right: 20px;color: #0e353d;"><br>Access your passwords and personal data in the web app — quickly and securely.<br><br></h4>
+            </div>
+        </div>
+        <div class="col" style="padding-top: 60PX;">
+            <div class="container" style="padding-left: 80px;">
+                <h3 class="text-left" style="padding-top: 70px;color: black;"><br>Log in to Passwordzz<br><br></h3>
+                <form class="text-left" method="post">
+                    {% csrf_token %}
+                    <label class="text-center">Enter your email to log in<br></label>
+                    <input class="form-control" type="email" name="email" placeholder="Enter your email address..." autocomplete="off" autofocus="" style="width: 350px;">
+                    <label class="text-center" style="margin-top: 10px;">Master password<br></label>
+                    <input class="form-control" type="password" name="password" placeholder="Enter your master password..." autocomplete="off" autofocus="" style="width: 350px;">
+                    <button class="btn btn-primary" data-bss-hover-animate="pulse" type="submit" style="margin: 25px 0px 0px 0px;padding: 12px 12px 12px 12px;width: 350px;background: #0e6476;border-style: none;margin-left: 0px;margin-bottom: 15px;">Next</button>
+                </form>
+                    <a class="text-left" href="#" style="/*text-align: center;*//*align-content: center;*//*margin-top: 0px;*/margin-left: 110px;padding-top: 0px;padding-bottom: 40px;">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bs-init.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="{% static 'assets/js/Sidebar-Menu.js' %}"></script>
+</body>
+
+</html>
